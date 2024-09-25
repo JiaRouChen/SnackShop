@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ch17_02 行動裝置線上訂購實作</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--引用jQuery Mobile函式庫  套用ThemeRoller製作的樣式-->
+<link rel="stylesheet" href="themes/sweet.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css" />
+<script src="jquery/jquery-1.9.1.min.js"></script>
+<script src="jquery/jquery.mobile-1.4.0.min.js"></script>
+
+<!--最佳化螢幕寬度-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+#content{
+font-size:15px;
+padding:20px;
+margin:0px;
+}
+.ui-block-a, .ui-block-b, .ui-block-c {
+      height : 30px;
+      text-align : center;
+      padding-top : 5px;
+	  border-bottom:1px solid;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	$('#orderitem').html(localStorage.orderitem);
+	$('#flavor').html(localStorage.flavor);
+	$('#num').html(localStorage.num);
+})
+function deleteOrder(){
+	localStorage.clear();	
+	$(".ui-grid-b").html("已取消訂單!");
+}
+
+</script>
+</head>
+<body>
+<div data-role="page" data-title="訂單列表" id="first" data-theme="a">
+<div data-role="header">
+<a href="index.html" data-icon="arrow-l" data-iconpos="left" data-ajax="false">回首頁</a><h1>訂單列表</h1>
+</div>
+<div data-role="content" id="content">
+<a href="#" data-role="button" data-inline="true" onclick="deleteOrder();">刪除訂單</a>
+
+以下為您的訂購清單：
+<div class="ui-grid-b">
+  <div class="ui-block-a ui-bar-a">甜點種類</div>
+  <div class="ui-block-b ui-bar-a">口味</div>
+  <div class="ui-block-c ui-bar-a">訂購數量</div>
+  <div class="ui-block-a ui-bar-b" id="orderitem"></div>
+  <div class="ui-block-b ui-bar-b" id="flavor"></div>
+  <div class="ui-block-c ui-bar-b" id="num"></div>
+</div>
+</div>
+<div data-role="footer" data-position="fixed" style="text-align:center">
+  訂購專線：45454545
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>行動裝置線上訂購實作</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--引用jQuery Mobile函式庫  套用ThemeRoller製作的樣式-->
+<link rel="stylesheet" href="themes/sweet.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css" />
+<script src="jquery/jquery-1.9.1.min.js"></script>
+<script src="jquery/jquery.mobile-1.4.0.min.js"></script>
+<!--最佳化螢幕寬度-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+body{font-family:Arial, Helvetica,  sans-serif,微軟正黑體;}
+#content{
+font-size:15px;
+padding:0px;
+margin:0px;
+}
+.firstcontent{text-align:center;}
+#logo{padding:30px;}
+img{margin:0px;padding:0px;}
+</style>
+</head>
+<body>
+<div data-role="page" data-title="Happy" id="first" data-theme="a">
+<div data-role="header">
+<h1>甜點坊訂購系統</h1>
+</div>
+<div data-role="content" id="content" class="firstcontent">
+	<img src="images/index.png" id="logo"><br/>
+	<a href="01.htm" data-ajax="false" data-role="button" data-icon="check" data-iconpos="top" data-mini="true" data-inline="true"><img src="images/food.png"><br>訂　購</a> 
+	<a href="02.htm" data-ajax="false" data-role="button" data-icon="star" data-iconpos="top" data-mini="true" data-inline="true"><img src="images/check.png"><br>查訂單</a> 
+	<a href="03.htm" data-ajax="false" data-role="button" data-icon="home" data-iconpos="top" data-mini="true" data-inline="true"><img src="images/store.png"><br>找店家</a> 
+</div>
+<div data-role="footer" data-position="fixed" style="text-align:center">
+  訂購專線：45454545
+</div>
+</div>
+</body>
+</html>
